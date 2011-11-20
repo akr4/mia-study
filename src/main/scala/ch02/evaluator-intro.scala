@@ -4,6 +4,7 @@ import collection.JavaConverters._
 
 import java.io.File
 import org.apache.mahout.cf.taste.impl.eval.AverageAbsoluteDifferenceRecommenderEvaluator
+import org.apache.mahout.cf.taste.impl.eval.RMSRecommenderEvaluator
 import org.apache.mahout.cf.taste.eval.RecommenderBuilder
 import org.apache.mahout.cf.taste.impl.model.file._
 import org.apache.mahout.cf.taste.impl.neighborhood._
@@ -21,6 +22,7 @@ object EvaluatorIntro extends App {
   RandomUtils.useTestSeed()
   val model = new FileDataModel(new File("../MIA/src/main/java/mia/recommender/ch02/intro.csv"))
   val evaluator = new AverageAbsoluteDifferenceRecommenderEvaluator
+  //val evaluator = new RMSRecommenderEvaluator
 
   val builder = new RecommenderBuilder {
     def buildRecommender(model: DataModel) = {
