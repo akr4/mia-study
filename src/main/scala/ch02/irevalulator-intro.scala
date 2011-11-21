@@ -19,7 +19,8 @@ import org.apache.mahout.common.RandomUtils
 object IREvaluatorIntro extends App {
 
   RandomUtils.useTestSeed()
-  val model = new FileDataModel(new File("../MIA/src/main/java/mia/recommender/ch02/intro.csv"))
+  //val model = new FileDataModel(new File("../MIA/src/main/java/mia/recommender/ch02/intro.csv"))
+  val model = new FileDataModel(new File("data/ml-100k/ua.base"))
   val evaluator = new GenericRecommenderIRStatsEvaluator
 
   val builder = new RecommenderBuilder {
