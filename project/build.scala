@@ -38,6 +38,7 @@ object MahoutTest extends Build {
   val mahoutDependencies = Seq(
     "org.apache.mahout" % "mahout-core" % mahoutVersion intransitive,
     "org.apache.mahout" % "mahout-math" % mahoutVersion,
+    "org.apache.mahout" % "mahout-examples" % mahoutVersion intransitive,
     "com.google.guava" % "guava" % "r09"
   )
 
